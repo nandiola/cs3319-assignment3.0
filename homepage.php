@@ -13,7 +13,7 @@
         <h2>250843475</h2>
 
         <h3>Question 1</h3>
-        <form action = "question1.php" method = "post">
+        <form action = "question1_purchasedata.php" method = "post">
             <?php include 'question1.php'; ?>	
 			<br />
 			<input type = "submit" value= "Show Purchases!"/>
