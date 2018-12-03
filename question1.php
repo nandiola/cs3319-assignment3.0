@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT * FROM (customer_purchases INNER JOIN customers ON customer_purchases.customer_id = customers.customer_id) INNER JOIN products ON customer_purchases.product_id = products.product_id;)";
+$query = "SELECT * FROM (customer_purchases INNER JOIN customers ON customer_purchases.customer_id = customers.customer_id) INNER JOIN products ON customer_purchases.product_id = products.product_id";
 
 $result = mysqli_query($connection,$query);
 
