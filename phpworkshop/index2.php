@@ -5,6 +5,9 @@
 <title>Dr. Western's Vet Clinic</title>
 </head>
 <body>
+<?php
+include 'connector.php';
+?>
 <h1>Welcome to the Western Vet Clinic</h1>
 <h2>Pets we look after</h2>
 <ol>
