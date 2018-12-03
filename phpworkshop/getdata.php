@@ -7,7 +7,7 @@ if (!$result) {
 echo "<ol>";
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<li>";
-    echo $row["species"] . "</li>";
+    echo $row["species"] ."--".$row["petname"]. "</li>";
 }
 mysqli_free_result($result);
 echo "</ol>";
