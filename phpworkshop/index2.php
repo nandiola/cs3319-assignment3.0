@@ -10,6 +10,9 @@ include 'connector.php';
 ?>
 <h1>Welcome to the Western Vet Clinic</h1>
 <h2>Pets we look after</h2>
+<?php
+include 'getdata.php';
+?>
 <ol>
 <li>Dogs</li>
 <li>Cats</li>
