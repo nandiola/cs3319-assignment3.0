@@ -21,9 +21,9 @@
 
         <h3>Question 2</h3>
         <form action = "question2_products.php" method = "post">
-            <input type="radio" name="user_choice" value="Price ASC"/>
-            <input type="radio" name="user_choice" value="Price DSC"/>	
-            <br />
+            <input type="radio" name="user_choice" value="Price ASC"/>XYZ<br>
+            <input type="radio" name="user_choice" value="Price DSC"/><br>	
+            
 			<input type = "submit" value= "Show Purchases!"/>
 		</form>
 		
