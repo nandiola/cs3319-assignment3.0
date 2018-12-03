@@ -11,7 +11,7 @@ if (!$result) {
 echo "<ol>";
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<li>";
-    echo $row["ownerid"] ."--".$row["petname"]. "</li>";
+    echo $row["ownerid"] ."--".$row["petname"].$row[fname] "</li>";
     }
 echo "</ol>";
 
