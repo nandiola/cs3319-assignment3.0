@@ -11,9 +11,30 @@ if (!$result) {
 echo "<ol>";
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<li>";
-    echo $row["firstname"] .$row["lastname"]. "</li>";
+    echo '<input type="radio" name="customerid" value="';
+    echo $row["customer_id"].": ".$row["firstname"].", ".$row["lastname"].</li>";
     }
 echo "</ol>";
 
 mysqli_free_result($result);
 ?>
+
+
+
+
+// <?php
+//         $query = "SELECT * FROM customers order by lastname asc";
+//         $result = mysqli_query($connection,$query);
+
+//         if (!$result) {
+//                 die("databases query failed.");
+//         }
+
+//         while ($row = mysqli_fetch_assoc($result)) {
+//                 echo '<input type="radio" name="customerid" value="';
+//                 echo $row["customerid"];
+//                 echo '">' .$row["firstname"] ." " .$row["lastname"] .", " .$row["city"] .", " .$row["phonenumber"] .", AgentID: " .$
+//         }
+
+//         mysqli_free_result($result);
+// ?>
