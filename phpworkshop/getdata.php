@@ -1,8 +1,8 @@
 <?php
-$query = "SELECT * FROM pet";
-$query2 = "SELECT * FROM owner";
+$query = "SELECT * FROM pet JOIN owner ON pet.ownerid=owner.ownerid";
+
 $result = mysqli_query($connection,$query);
-$result2 = mysqli_query($connection,$query2);
+
 
 if (!$result) {
     die("databases query failed.");
@@ -10,10 +10,10 @@ if (!$result) {
 
 echo "<ol>";
 while ($row = mysqli_fetch_assoc($result)) {
-    $owner =  mysqli_fetch_assoc($result2);
     echo "<li>";
-    echo $row["ownerid"] ."--".$row["petname"].$owner["ownerid"]. "</li>";
+    echo $row["ownerid"] ."--".$row["petname"]. "</li>";
     }
-mysqli_free_result($result);
 echo "</ol>";
+
+mysqli_free_result($result);
 ?>
