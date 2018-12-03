@@ -9,7 +9,7 @@
                 <h1>Products Purchased</h1>
 
                 <?php
-                        include 'connectdb.php';
+                        include 'connector.php';
 
                         $customer_ID= $_POST["customer_id"];
 
