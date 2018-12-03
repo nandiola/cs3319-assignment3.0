@@ -16,12 +16,12 @@
                         $query = "SELECT * FROM
                                 (purchases INNER JOIN customers ON customer_purchases.customer_id = customers.customer_id)
                                 INNER JOIN products ON products.product_id = customer_purchases.product_id
-                                WHERE customers.customerid = '$customer_ID'";
+                                WHERE customers.customer_id = '$customer_ID'";
 
                         $result=mysqli_query($connection,$query);
 
                         if (!$result) {
-                                die("database query2 failed.");
+                                die("database query purchase data failed.");
                         }
 
                         while ($row=mysqli_fetch_assoc($result)) {
