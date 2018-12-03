@@ -8,13 +8,12 @@ if (!$result) {
     die("databases query failed.");
 }
 
-echo "<ol>";
-while ($row = mysqli_fetch_assoc($result)) {
-    echo "<li>";
-    echo '<input type="radio" name="customerid" value="';
-    echo $row["customer_id"].": ".$row["firstname"].", ".$row["lastname"].</li>";
-    }
-echo "</ol>";
+
+        while ($row = mysqli_fetch_assoc($result)) {
+                echo '<input type="radio" name="customer_id" value="';
+                echo $row["customer_id"];
+                echo '">' .$row["firstname"] ." " .$row["lastname"] .", " .$row["city_located"] .", " .$row["phone_number"] .", AgentID: " .$
+        }
 
 mysqli_free_result($result);
 ?>
@@ -38,3 +37,13 @@ mysqli_free_result($result);
 
 //         mysqli_free_result($result);
 // ?>
+
+
+//MY CODE
+
+// while ($row = mysqli_fetch_assoc($result)) {
+//     echo "<li>";
+//     echo '<input type="radio" name="customer_id" value="';
+//     echo $row["customer_id"].": ".$row["firstname"].", ".$row["lastname"].</li>";
+//     }
+// echo "</ol>";
