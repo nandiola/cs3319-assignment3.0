@@ -45,7 +45,7 @@
 
         <h3>Question 5</h3>
         <form action = "question5_changephonenumber.php" method = "post">
-            change phone number. Enter Customer ID to begin: <input type="text" name="customer_id"><br>	
+            Change phone number. Enter Customer ID to begin: <input type="text" name="customer_id"><br>	
 			<br />
 			<input type = "submit" value= "Enter Customer"/>
 		</form>
@@ -55,6 +55,13 @@
             <?php include 'question6_buttons.php'; ?>	
 			<br />
 			<input type = "submit" value= "Delete This User"/>
+		</form>
+
+        <h3>Question 7</h3>
+        <form action = "question6_showproducts.php" method = "post">
+            See users who purchased items in quantity more than: <input type="text" name="quantity_entered"><br>	
+			<br />
+			<input type = "submit" value= "See Purchases"/>
 		</form>
 		
     </body>

@@ -6,7 +6,7 @@
         </head>
 
         <body>
-                <h1>Products Purchased</h1>
+                <h1>Change phone number</h1>
 
                 <?php
                         include 'connector.php';
@@ -22,7 +22,7 @@
                         }
 
                         while ($row=mysqli_fetch_assoc($result)) {
-                                echo "Current phone number";
+                                echo "Current phone number: ";
                                 echo $row["phone_number"];
                         }
 

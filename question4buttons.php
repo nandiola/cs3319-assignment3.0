@@ -10,7 +10,7 @@
 
         echo 'Customer Agent ID: <input type="text" name="agent_id"><br>';
 
-        echo 'Customer phone number: <input type="text" name="phone_number"><br>';
+        echo 'Customer phone number (in this world we only use 7 digit numbers0: <input type="text" name="phone_number"><br>';
         
         echo 'Customer ID (cannot be the same as an existing ID): <input type="text" name="customer_id"><br>';
 

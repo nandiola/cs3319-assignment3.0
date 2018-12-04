@@ -17,10 +17,6 @@
                                 
                         $result=mysqli_query($connection,$query);
 
-                        if (!$result) {
-                                die("database query purchase data failed.");
-                        }
-
                         mysqli_free_result($result);
                 ?>
 
