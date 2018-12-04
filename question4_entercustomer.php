@@ -33,7 +33,7 @@
                                     die("customer purchase insert query failed.");
                             }
                         } else {
-                            echo "entry existed before; NO ENTRY made."
+                            echo "entry existed before; NO ENTRY made.";
                         }
 
                         mysqli_free_result($get_result);
