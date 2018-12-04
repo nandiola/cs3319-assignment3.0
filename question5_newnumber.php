@@ -15,6 +15,7 @@
                         $customer_id = $_POST["[customer_id]"];
 
                         echo $new_phone_number;
+                        echo "hello";
                         echo $_POST["[phone_number]"];
                         echo $customer_id;
 
@@ -23,7 +24,7 @@
                         $result=mysqli_query($connection,$query);
 
                         if (!$result) {
-                                die("update ph number query failed.");
+                                die("update phone number query failed.");
                         }
 
                         
