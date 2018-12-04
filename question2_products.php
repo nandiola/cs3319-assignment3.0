@@ -11,12 +11,12 @@
                 <?php
                         include 'connector.php';
                         $choice= $_POST["user_choice"];
-                        $result=mysqli_query($connection,$query);
 
 
 
                         if($choice == "Price ASC"){
                             $query = "SELECT * FROM products ORDER BY cost ASC";
+                            $result=mysqli_query($connection,$query);
                             if (!$result) {
                                 die("database query price ascending failed.");
                             }
@@ -30,6 +30,7 @@
 
                         if($choice == "Price DSC"){
                             $query = "SELECT * FROM products ORDER BY cost DESC";
+                            $result=mysqli_query($connection,$query);
                             if (!$result) {
                                 die("database query price descending failed.");
                             }
