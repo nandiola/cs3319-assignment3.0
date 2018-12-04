@@ -22,9 +22,9 @@
                         }
 
                         while ($row=mysqli_fetch_assoc($result)) {
-                                echo '<li>';
-                                echo $row["customer_id"];
-                                echo '</li>';
+                                echo '<ol>';
+                                echo $row["customer_id"].", ".$row["quantity_purchased"]$row["descriptiontext"].": ".$row["cost"];
+                                echo '</ol>';
                         }
 
                         mysqli_free_result($result);
