@@ -32,11 +32,8 @@
                         }
 
                         $row=mysqli_fetch_assoc($get_result);
-                        $previous_quantity = $row["quantity_purchased"];
                         
-                        echo "$previous_quantity";
-                        echo "$quantity";
-                        if($previous_quantity<$quantity){
+                        if($row["quantity_purchased"]<$quantity){
                             echo "entry existed before; updated";
                             $update_query = "UPDATE customer_purchases SET quantity_purchased = $quantity WHERE customer_id=$customer_ID AND product_id=$product_ID";
 
