@@ -23,7 +23,7 @@
 
                         while ($row=mysqli_fetch_assoc($result)) {
                                 echo '<ol>';
-                                echo $row["customer_id"].", ".$row["quantity_purchased"]$row["descriptiontext"].": ".$row["cost"];
+                                echo $row["customer_id"].", ".$row["quantity_purchased"].", ".$row["descriptiontext"].": ".$row["cost"];
                                 echo '</ol>';
                         }
 
