@@ -17,7 +17,7 @@
                                 (customer_purchases INNER JOIN customers ON customer_purchases.customer_id = customers.customer_id)
                                 INNER JOIN products ON products.product_id = customer_purchases.product_id
                                 WHERE customers.customer_id = '$customer_ID'";
-
+                                
                         $result=mysqli_query($connection,$query);
 
                         if (!$result) {

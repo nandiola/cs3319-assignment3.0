@@ -15,12 +15,31 @@
                         $quantity= $_POST["quantity"];
                         $product_ID= $_POST["product_id"];
 
-                        $query = "INSERT INTO customer_purchases VALUES($customer_ID, $product_ID, $quantity)";
+                        $get_query = "SELECT * FROM customer_purchases WHERE customer_purchases.customer_id=$customer_ID, AND customer_purchases.product_id=$product_ID AND customer_purchases.quantity_purchased=$quantity";
+                        
+                        $get_result=mysqli_query($connection,$get_query);
 
-                        $result=mysqli_query($connection,$query);
+                        if(!$get_result){
+                            $insert_query = "INSERT INTO customer_purchases VALUES($customer_ID, $product_ID, $quantity)";
 
-                        if (!$result) {
-                                die("customer purchase insert query failed.");
+                            $insert_result=mysqli_query($connection,$insert_query);
+
+                            if (!$insert_result) {
+                                    die("customer purchase insert query failed.");
+                            }
+                        }
+
+                        $row=mysqli_fetch_assoc($get_result);
+                        $previous_quantity = $row["quantity_purchased"];
+                        
+                        if($previous_quantity<$quantity){
+                            $update_query = "UPDATE customer_purchases SET quantity_purchased = $quantity WHERE customer_id=$customer_ID AND product_id=$product_ID";
+
+                            $update_result=mysqli_query($connection,$update_query);
+
+                            if (!$update_result) {
+                                    die("customer purchase update query failed.");
+                            }
                         }
 
                 ?>
