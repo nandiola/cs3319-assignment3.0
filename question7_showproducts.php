@@ -23,8 +23,8 @@
 
                         while ($row=mysqli_fetch_assoc($result)) {
                                 echo '<li>';
-                                echo 'dust';
-                                echo $row["descriptiontext"];
+                                echo "dust";
+                                echo $row["customer_id"];
                                 echo '</li>';
                         }
 
