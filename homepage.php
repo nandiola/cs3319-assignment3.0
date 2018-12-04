@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Assignment 3 - Shah Khan</title>
+		<title>Assignment 3 Homepage</title>
 	</head>
 	
 	<body>	
@@ -14,9 +14,9 @@
 
         <h3>Question 1</h3>
         <form action = "question1_purchasedata.php" method = "post">
-            <?php include 'question1.php'; ?>	
+            <?php include 'question1buttons.php'; ?>	
 			<br />
-			<input type = "submit" value= "Show Purchases!"/>
+			<input type = "submit" value= "Show Purchase Data"/>
 		</form>
 
         <h3>Question 2</h3>
@@ -26,7 +26,14 @@
             <input type="radio" name="user_choice" value="Description ASC"/>Description: Ascending<br>	
             <input type="radio" name="user_choice" value="Description DSC"/>Description: Descending<br>	
             
-			<input type = "submit" value= "Show Purchases!"/>
+			<input type = "submit" value= "See Products"/>
+		</form>
+
+        <h3>Question 3</h3>
+        <form action = "question3_enterpurchase.php" method = "post">
+            <?php include 'question3buttons.php'; ?>	
+			<br />
+			<input type = "submit" value= "Enter Purchase"/>
 		</form>
 		
     </body>
