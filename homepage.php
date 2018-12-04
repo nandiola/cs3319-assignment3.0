@@ -49,6 +49,13 @@
 			<br />
 			<input type = "submit" value= "Enter Customer"/>
 		</form>
+
+        <h3>Question 6</h3>
+        <form action = "question6_delete.php" method = "post">
+            <?php include 'question6_buttons.php'; ?>	
+			<br />
+			<input type = "submit" value= "Delete This User"/>
+		</form>
 		
     </body>
 </html>

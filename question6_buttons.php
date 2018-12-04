@@ -16,13 +16,14 @@
                         $result=mysqli_query($connection,$query);
 
                         if (!$result) {
-                                die("database query purchase data failed.");
+                                die("database query user data failed.");
                         }
 
                         while ($row=mysqli_fetch_assoc($result)) {
-                                echo '<li>';
-                                echo $row["descriptiontext"];
-                                echo '</li>';
+                                echo '<input type="radio" name="customer_id" value="';
+                                echo $row["customer_id"];
+                                echo '">' .$row["firstname"] ." " .$row["lastname"] .", " .$row["city_located"] .", " .$row["phone_number"]; 
+                                echo "<br>";
                         }
 
                         mysqli_free_result($result);
