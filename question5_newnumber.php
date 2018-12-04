@@ -15,6 +15,7 @@
                         $customer_id = $_POST["[customer_id]"];
 
                         echo $new_phone_number;
+                        echo $_POST["[phone_number]"];
                         echo $customer_id;
 
                         $query = "UPDATE customers SET phone_number = $new_phone_number WHERE customer_id=$customer_id";
