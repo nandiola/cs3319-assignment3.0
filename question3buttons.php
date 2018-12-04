@@ -24,7 +24,7 @@ if (!$product_result) {
                 echo '">' .$row["firstname"] ." " .$row["lastname"]; 
                 echo "<br>";
                 echo "</input>";
-                echo "</div>"
+                echo "</div>";
         }
 
         echo "<h5>Choose product</h5>";
