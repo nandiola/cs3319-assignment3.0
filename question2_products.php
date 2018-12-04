@@ -13,13 +13,14 @@
                         $choice= $_POST["user_choice"];
                         $result=mysqli_query($connection,$query);
 
-                        if (!$result) {
-                                die("database query purchase data failed.");
-                        }
+
 
                         if($choice == "Price ASC"){
                             $query = "SELECT * FROM products ORDER BY cost ASC";
-                            
+                            if (!$result) {
+                                die("database query price ascending failed.");
+                            }
+
                             while ($row=mysqli_fetch_assoc($result)) {
                                 echo '<li>';
                                 echo $row["descriptiontext"].$row["cost"];
@@ -29,7 +30,9 @@
 
                         if($choice == "Price DSC"){
                             $query = "SELECT * FROM products ORDER BY cost DESC";
-                            
+                            if (!$result) {
+                                die("database query price descending failed.");
+                            }
                             while ($row=mysqli_fetch_assoc($result)) {
                                 echo '<li>';
                                 echo $row["descriptiontext"].$row["cost"];
