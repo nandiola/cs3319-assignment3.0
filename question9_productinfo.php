@@ -13,7 +13,7 @@
 
                         $product_id= $_POST["product_id"];
 
-                        $query = 'SELECT cost, SUM(quantity_purchased) AS "sum" FROM purchase_views INNER JOIN products on purchase_views.descriptiontext=products.descriptiontext WHERE product_id='.$product_id;
+                        $query = 'SELECT cost, SUM(quantity_purchased) AS summation FROM purchase_views INNER JOIN products on purchase_views.descriptiontext=products.descriptiontext WHERE product_id='.$product_id;
                                 
                         $result=mysqli_query($connection,$query);
 
@@ -21,7 +21,7 @@
                                 die("database query purchase data failed.");
                         }
 
-                        echo $row["cost"]." sum: ".$row["sum"];
+                        echo $row["cost"]." sum: ".$row["summation"];
 
                         mysqli_free_result($result);
                 ?>
