@@ -16,8 +16,8 @@ if (!$result) {
                 echo '<input type="radio" name="phone_number" value="';
                 echo $row["phone_number"];
                 echo '">' .$row["firstname"] ." " .$row["lastname"] .", " .$row["city_located"] .", " .$row["phone_number"]; 
-                echo '<input type="hidden" name="customer_id" value="'.$row["customer_id"]'">';
-                echo "<br>";
+                echo '<input type="hidden" name="customer_id" value="'.$row["customer_id"];
+                echo ''">';
         }
 
 mysqli_free_result($result);
