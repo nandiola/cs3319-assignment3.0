@@ -32,7 +32,7 @@ if (!$product_result) {
             echo '<input type="radio" name="product_id" value="';
             echo $row["product_id"];
             echo '">' .$row["descriptiontext"] ." " .$row["cost"]; 
-            echo "<br>";
+            echo "<br><br>";
         }
 
         echo 'Quantity Purchased: <input type="text" name="quantity"><br>';
