@@ -18,7 +18,7 @@
                         }
 
                         if($choice == "Price ASC"){
-                            $query = "SELECT * FROM products ORDER BY cost ASC;
+                            $query = "SELECT * FROM products ORDER BY cost ASC";
                             
                             while ($row=mysqli_fetch_assoc($result)) {
                                 echo '<li>';
@@ -28,7 +28,7 @@
                         }
 
                         if($choice == "Price DSC"){
-                            $query = "SELECT * FROM products ORDER BY cost DESC;
+                            $query = "SELECT * FROM products ORDER BY cost DESC";
                             
                             while ($row=mysqli_fetch_assoc($result)) {
                                 echo '<li>';
