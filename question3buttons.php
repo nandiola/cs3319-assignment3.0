@@ -33,7 +33,9 @@ if (!$product_result) {
             echo $row["product_id"];
             echo '">' .$row["descriptiontext"] ." " .$row["cost"]; 
             echo "<br>";
-    }
+        }
+
+        echo 'Quantity Purchased: <input type="text" name="quantity"><br>'
 
 
         mysqli_free_result($customer_result);
