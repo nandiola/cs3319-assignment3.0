@@ -69,7 +69,7 @@
 
         <h3>Question 9</h3>
         <form action = "question9_productinfo.php" method = "post">
-            Revenue from item: <input type="text" name="product_id"><br>	
+            <?php include 'question9_buttons.php'; ?>
 			<br />
 			<input type = "submit" value= "See Revenue"/>
 		</form>
