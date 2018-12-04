@@ -11,7 +11,7 @@
                 <?php
                         include 'connector.php';
 
-                        $customer_ID= $_POST["customer_id"];
+                        $customer_id= $_POST["customer_id"];
 
                         $query = "SELECT * FROM customers WHERE customer_id=$customer_ID";
                                 
@@ -29,8 +29,8 @@
                         
                         echo '<form action = "question5_newnumber.php" method = "post">';
                         echo  'New phone number:   <input type="text" name="phone_number"><br>';
-                        echo '<input type="hidden" name="customer_id" value="$customer_ID">';
-                        echo '<input type = "submit" value= "Enter Customer"/>';
+                        echo '<input type="hidden" name="customer_id" value="$customer_id">';
+                        echo '<input type = "submit" value= "Enter new number"/>';
                         echo '</form>';
 
                         mysqli_free_result($result);

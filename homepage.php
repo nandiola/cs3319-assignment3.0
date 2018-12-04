@@ -44,10 +44,9 @@
 		</form>
 
         <h3>Question 5</h3>
-        <form action = "question5_changephonenumber.php" method = "post">
-            Change phone number. Enter Customer ID to begin: <input type="text" name="customer_id"><br>	
-			<br />
-			<input type = "submit" value= "Enter Customer"/>
+        <form action = "question5_newnumber.php" method = "post">
+            <?php include 'question5_buttons.php'; ?>
+			<input type = "submit" value= "Choose Customer"/>
 		</form>
 
         <h3>Question 6</h3>
