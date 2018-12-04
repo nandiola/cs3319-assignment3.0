@@ -64,5 +64,8 @@
 			<input type = "submit" value= "See Purchases"/>
 		</form>
 		
+        <h3>Question 8</h3>
+        <?php include 'question8_products.php'; ?>
+
     </body>
 </html>
