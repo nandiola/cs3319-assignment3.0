@@ -13,7 +13,7 @@ if (!$result) {
 
 
         while ($row = mysqli_fetch_assoc($result)) {
-                echo '<input type="radio" name="customer_id" value="';
+                echo '<input type="radio" name="product_id" value="';
                 echo $row["product_id"];
                 echo '">' .$row["descriptiontext"].", " .$row["cost"]; 
                 echo "<br>";
