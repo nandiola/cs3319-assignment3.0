@@ -1,5 +1,6 @@
 <?php
 
+
 $query = "SELECT * FROM customers order by lastname asc";
 
 $result = mysqli_query($connection,$query);
