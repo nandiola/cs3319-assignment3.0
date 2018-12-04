@@ -23,9 +23,10 @@
                         $get_result=mysqli_query($connection,$get_query);
                         
                         
+                        
                         if($get_result == FALSE){
                             echo "entry didnt exist before; added new entry<br>";
-                            $insert_query = "INSERT INTO customers (customer_id, agent_id, firstname,lastname,city_located,phone_number) VALUES('".$customer_ID."','".$agent_id."','".$firstname."','".$lastname."','".$city_located."','".$phone_number."')";
+                            $insert_query = "INSERT INTO customers (customer_id, agent_id, firstname,lastname,city_located,phone_number) VALUES('".$customer_id."','".$agent_id."','".$firstname."','".$lastname."','".$city_located."','".$phone_number."')";
                             $insert_result=mysqli_query($connection,$insert_query);
 
                             if (!$insert_result) {
