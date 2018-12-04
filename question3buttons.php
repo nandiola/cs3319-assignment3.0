@@ -35,7 +35,7 @@ if (!$product_result) {
             echo "<br>";
         }
 
-        echo 'Quantity Purchased: <input type="text" name="quantity"><br>'
+        echo 'Quantity Purchased: <input type="text" name="quantity"><br>';
 
 
         mysqli_free_result($customer_result);
