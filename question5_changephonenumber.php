@@ -29,7 +29,8 @@
 
                         
                         echo '<form action = "question5_newnumber.php" method = "post">';
-                        echo  'New phone number: <input type="text" name="phone_number"><br>';
+                        echo  'New phone number:   <input type="text" name="phone_number"><br>';
+                        echo '<input type="hidden" name="customer_id" value="$customer_ID">';
                         echo '<input type = "submit" value= "Enter Customer"/>';
                         echo '</form>';
 
