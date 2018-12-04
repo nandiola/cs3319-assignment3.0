@@ -13,7 +13,7 @@
 
                         $quantity_entered= $_POST["quantity_entered"];
 
-                        $query = "SELECT * FROM (customer_purchases INNER JOIN customers ON 'customers.customer_id'='customer_purchases.customer') INNER JOIN products ON 'customer_purchases.product_id'='products.product_id' WHERE customer_purchases.quanity_on_hand >". $quantity_entered;
+                        $query = "SELECT * FROM (customer_purchases INNER JOIN customers ON 'customers.customer_id'='customer_purchases.customer_id') INNER JOIN products ON 'customer_purchases.product_id'='products.product_id' WHERE customer_purchases.quantity_purchased >". $quantity_entered;
                                 
                         $result=mysqli_query($connection,$query);
 
