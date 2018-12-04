@@ -58,7 +58,7 @@
 		</form>
 
         <h3>Question 7</h3>
-        <form action = "question6_showproducts.php" method = "post">
+        <form action = "question7_showproducts.php" method = "post">
             See users who purchased items in quantity more than: <input type="text" name="quantity_entered"><br>	
 			<br />
 			<input type = "submit" value= "See Purchases"/>
