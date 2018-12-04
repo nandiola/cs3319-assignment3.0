@@ -20,12 +20,6 @@
                             if (!$result) {
                                 die("database query price ascending failed.");
                             }
-
-                            while ($row=mysqli_fetch_assoc($result)) {
-                                echo '<li>';
-                                echo $row["descriptiontext"].$row["cost"];
-                                echo '</li>';
-                            }
                         }
 
                         if($choice == "Price DSC"){
@@ -34,11 +28,28 @@
                             if (!$result) {
                                 die("database query price descending failed.");
                             }
-                            while ($row=mysqli_fetch_assoc($result)) {
-                                echo '<li>';
-                                echo $row["descriptiontext"].$row["cost"];
-                                echo '</li>';
+                        }
+
+                        if($choice == "Description ASC"){
+                            $query = "SELECT * FROM products ORDER BY descriptiontext ASC";
+                            $result=mysqli_query($connection,$query);
+                            if (!$result) {
+                                die("database query description ascending failed.");
                             }
+                        }
+
+                        if($choice == "Description DSC"){
+                            $query = "SELECT * FROM products ORDER BY descriptiontext DESC";
+                            $result=mysqli_query($connection,$query);
+                            if (!$result) {
+                                die("database query description descending failed.");
+                            }
+                        }
+
+                        while ($row=mysqli_fetch_assoc($result)) {
+                            echo '<li>';
+                            echo $row["descriptiontext"].": ".$row["cost"];
+                            echo '</li>';
                         }
 
                         mysqli_free_result($result);
