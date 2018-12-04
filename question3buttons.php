@@ -17,11 +17,13 @@ if (!$product_result) {
 
 
         while ($row = mysqli_fetch_assoc($customer_result)) {
+            echo "<div>";
                 echo '<input type="radio" name="customer_id" value="';
                 echo $row["customer_id"];
                 echo '">' .$row["firstname"] ." " .$row["lastname"]; 
                 echo "<br>";
                 echo "</input>";
+                echo "</div>"
         }
 
         while ($row = mysqli_fetch_assoc($product_result)) {
