@@ -16,6 +16,7 @@ if (!$product_result) {
 }
 
 
+        echo "<h5>Choose customer</h5>"
         while ($row = mysqli_fetch_assoc($customer_result)) {
             echo "<div>";
                 echo '<input type="radio" name="customer_id" value="';
@@ -26,8 +27,9 @@ if (!$product_result) {
                 echo "</div>"
         }
 
+        echo "<h5>Choose product</h5>"
         while ($row = mysqli_fetch_assoc($product_result)) {
-            echo '<input type="radio" name="customer_id" value="';
+            echo '<input type="radio" name="product_id" value="';
             echo $row["product_id"];
             echo '">' .$row["descriptiontext"] ." " .$row["cost"]; 
             echo "<br>";
