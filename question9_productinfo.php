@@ -13,7 +13,7 @@
 
                         $product_id= $_POST["product_id"];
 
-                        $query = "SELECT cost, SUM(quantity_purchased) AS "sum" FROM purchase_views INNER JOIN products on purchase_views.descriptiontext=products.descriptiontext WHERE product_id="$product_id;
+                        $query = 'SELECT cost, SUM(quantity_purchased) AS "sum" FROM purchase_views INNER JOIN products on purchase_views.descriptiontext=products.descriptiontext WHERE product_id='.$product_id;
                                 
                         $result=mysqli_query($connection,$query);
 
