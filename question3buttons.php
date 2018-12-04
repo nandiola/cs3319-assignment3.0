@@ -21,6 +21,7 @@ if (!$product_result) {
                 echo $row["customer_id"];
                 echo '">' .$row["firstname"] ." " .$row["lastname"]; 
                 echo "<br>";
+                echo "</input>";
         }
 
         while ($row = mysqli_fetch_assoc($product_result)) {
