@@ -22,7 +22,7 @@
                         }
 
                         $row=mysqli_fetch_assoc($result);
-                        echo $row["cost"]." sum: ".$row["summation"];
+                        echo "Cost per item: ".$row["cost"]." <br>Total Quantity Sold: ".$row["summation"]."<br>Total Revenue Generated: ".$row["summation"]*$row["cost"];
 
                         mysqli_free_result($result);
                 ?>
