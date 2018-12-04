@@ -10,24 +10,31 @@
 
                 <?php
                         include 'connector.php';
-
-                        $customer_ID= $_POST["customer_id"];
-
-                        $query = "SELECT * FROM
-                                (customer_purchases INNER JOIN customers ON customer_purchases.customer_id = customers.customer_id)
-                                INNER JOIN products ON products.product_id = customer_purchases.product_id
-                                WHERE customers.customer_id = '$customer_ID'";
-
+                        $choice= $_POST["user_choice"];
                         $result=mysqli_query($connection,$query);
 
                         if (!$result) {
                                 die("database query purchase data failed.");
                         }
 
-                        while ($row=mysqli_fetch_assoc($result)) {
+                        if($choice == "Price ASC"){
+                            $query = "SELECT * FROM products ORDER BY cost ASC;
+                            
+                            while ($row=mysqli_fetch_assoc($result)) {
                                 echo '<li>';
-                                echo $row["descriptiontext"];
+                                echo $row["descriptiontext"].$row["cost"];
                                 echo '</li>';
+                            }
+                        }
+
+                        if($choice == "Price DSC"){
+                            $query = "SELECT * FROM products ORDER BY cost DESC;
+                            
+                            while ($row=mysqli_fetch_assoc($result)) {
+                                echo '<li>';
+                                echo $row["descriptiontext"].$row["cost"];
+                                echo '</li>';
+                            }
                         }
 
                         mysqli_free_result($result);
