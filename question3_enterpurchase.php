@@ -19,8 +19,8 @@
                         
                         $get_result=mysqli_query($connection,$get_query);
                         
-                        echo "$get_result";
-                        if(!$get_result){
+                        
+                        if($get_result == FALSE){
                             $insert_query = "INSERT INTO customer_purchases VALUES($customer_ID, $product_ID, $quantity)";
 
                             $insert_result=mysqli_query($connection,$insert_query);
