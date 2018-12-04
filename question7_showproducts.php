@@ -13,7 +13,7 @@
 
                         $quantity_entered= $_POST["quantity_entered"];
 
-                        $query = "SELECT * FROM customer_purchases WHERE quantity_purchased>".$quantity_entered;
+                        $query = "SELECT * FROM purchase_views WHERE quantity_purchased>".$quantity_entered;
                                 
                         $result=mysqli_query($connection,$query);
 
@@ -23,7 +23,7 @@
 
                         while ($row=mysqli_fetch_assoc($result)) {
                                 echo '<ol>';
-                                echo $row["customer_id"].", ".$row["quantity_purchased"].", ".$row["descriptiontext"].": ".$row["cost"];
+                                echo $row["firstname"]." ".$row["lastname"].", ".$row["quantity_purchased"].", ".$row["descriptiontext"].": ".$row["cost"];
                                 echo '</ol>';
                         }
 
