@@ -12,9 +12,9 @@
                         include 'connector.php';
 
                         $new_phone_number= $_POST["[phone_number]"];
+                        $customer_id = $_POST["[customer_id]"];
 
-                        $query = "SELECT * FROM
-                                customers WHERE customer_id=$customer_ID";
+                        $query = "UPDATE customers SET phone_number = $new_phone_number WHERE customer_id=$customer_id";
                                 
                         $result=mysqli_query($connection,$query);
 
