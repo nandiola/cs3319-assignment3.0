@@ -17,7 +17,7 @@ if (!$result) {
                 echo $row["phone_number"];
                 echo '">' .$row["firstname"] ." " .$row["lastname"] .", " .$row["city_located"] .", " .$row["phone_number"]; 
                 echo '<input type="hidden" name="customer_id" value="'.$row["customer_id"];
-                echo ''">';
+                echo '">';
         }
 
 mysqli_free_result($result);
