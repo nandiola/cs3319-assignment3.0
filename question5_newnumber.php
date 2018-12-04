@@ -6,7 +6,7 @@
         </head>
 
         <body>
-                <h1>Products Purchased</h1>
+                <h1>Change phone number</h1>
 
                 <?php
                         include 'connector.php';
@@ -22,7 +22,7 @@
                         $result=mysqli_query($connection,$query);
 
                         if (!$result) {
-                                die("database query purchase data failed.");
+                                die("update ph number query failed.");
                         }
 
                         
