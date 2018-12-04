@@ -11,7 +11,7 @@
                 <?php
                         include 'connector.php';
 
-                        $new_phone_number= $_POST["[phone_number]"];
+                        $new_phone_number= $_POST["[new_phone_number]"];
                         $customer_id = $_POST["[customer_id]"];
 
                         echo $new_phone_number;

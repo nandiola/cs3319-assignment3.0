@@ -46,6 +46,7 @@
         <h3>Question 5</h3>
         <form action = "question5_newnumber.php" method = "post">
             <?php include 'question5_buttons.php'; ?>
+            Enter new number: <input type="text" name="new_phone_number"><br>
 			<input type = "submit" value= "Choose Customer"/>
 		</form>
 
