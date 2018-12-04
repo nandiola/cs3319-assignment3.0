@@ -13,8 +13,7 @@
 
                         $customer_ID= $_POST["customer_id"];
 
-                        $query = "SELECT * FROM
-                                customers WHERE customer_id=$customer_ID";
+                        $query = "SELECT * FROM customers WHERE customer_id=$customer_ID";
                                 
                         $result=mysqli_query($connection,$query);
 
