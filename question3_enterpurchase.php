@@ -21,8 +21,8 @@
                         
                         
                         if($get_result == FALSE){
-                            echo "entry didnt exist before; added new entry";
-                            $insert_query = "INSERT INTO customer_purchases VALUES($customer_ID, $product_ID, $quantity)";
+                            echo "entry didnt exist before - added new entry";
+                            $insert_query = "INSERT INTO customer_purchases VALUES(".$customer_ID.",".$product_ID.",".$quantity.")";
 
                             $insert_result=mysqli_query($connection,$insert_query);
 
@@ -35,7 +35,7 @@
                         
 
                         if($row["quantity_purchased"]<$quantity){
-                            echo "entry existed before; updated";
+                            echo "entry existed before - updated";
                             $update_query = "UPDATE customer_purchases SET quantity_purchased = $quantity WHERE customer_id=$customer_ID AND product_id=$product_ID";
 
                             $update_result=mysqli_query($connection,$update_query);
@@ -46,7 +46,7 @@
                         }
 
                         if($previous_quantity>$quantity){
-                            echo "quantity too low; no changes made.";
+                            echo "quantity too low - no changes made.";
                         }
 
                 ?>
