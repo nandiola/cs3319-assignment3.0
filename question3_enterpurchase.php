@@ -15,10 +15,10 @@
                         $quantity= $_POST["quantity"];
                         $product_ID= $_POST["product_id"];
 
-                        $get_query = "SELECT * FROM customer_purchases WHERE customer_purchases.customer_id=$customer_ID AND customer_purchases.product_id=" .$product_ID." AND customer_purchases.quantity_purchased=".$quantity;
+                        $get_query = "SELECT * FROM customer_purchases WHERE customer_purchases.customer_id=".$customer_ID." AND customer_purchases.product_id=" .$product_ID." AND customer_purchases.quantity_purchased=".$quantity;
                         
                         $get_result=mysqli_query($connection,$get_query);
-                        
+                        $row=mysqli_fetch_assoc($get_result);
                         
                         if($get_result == FALSE){
                             echo "entry didnt exist before - added new entry";
@@ -29,12 +29,8 @@
                             if (!$insert_result) {
                                     die("customer purchase insert query failed.");
                             }
-                        }
-
-                        $row=mysqli_fetch_assoc($get_result);
-                        
-
-                        if($row["quantity_purchased"]<$quantity){
+                        } 
+                        elseif($row["quantity_purchased"]<$quantity){
                             echo "entry existed before - updated";
                             $update_query = "UPDATE customer_purchases SET quantity_purchased = $quantity WHERE customer_id=$customer_ID AND product_id=$product_ID";
 
