@@ -24,16 +24,16 @@
                         
                         
                         if($get_result == FALSE){
-                            echo "entry didnt exist before; added new entry";
-                            $insert_query = "INSERT INTO customer VALUES($customer_ID, $agent_id, $firstname, $lastname, $city_located, $phone_number)";
+                            echo "entry didnt exist before; added new entry<br>";
+                            $insert_query = "INSERT INTO customers VALUES($customer_ID, $agent_id, $firstname, $lastname, $city_located, $phone_number)";
 
                             $insert_result=mysqli_query($connection,$insert_query);
 
                             if (!$insert_result) {
-                                    die("customer purchase insert query failed.");
+                                    die("customer purchase insert query failed.<br>");
                             }
                         } else {
-                            echo "entry existed before; NO ENTRY made.";
+                            echo "entry existed before; NO ENTRY made.<br>";
                         }
 
                         mysqli_free_result($get_result);
