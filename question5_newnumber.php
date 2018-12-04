@@ -14,9 +14,6 @@
                         $new_phone_number= $_POST["new_phone_number"];
                         $customer_id = $_POST["customer_id"];
 
-                        echo "error".$new_phone_number;
-                        echo $customer_id;
-
                         $query = "UPDATE customers SET phone_number =".$new_phone_number." WHERE customer_id=".$customer_id;
                                 
                         $result=mysqli_query($connection,$query);
