@@ -23,7 +23,6 @@
                                 die("customer purchase insert query failed.");
                         }
 
-                        mysqli_free_result($result);
                 ?>
 
                 <?php
