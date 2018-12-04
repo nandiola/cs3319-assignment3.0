@@ -21,6 +21,7 @@
                                 die("database query purchase data failed.");
                         }
 
+                        $row=mysqli_fetch_assoc($result);
                         echo $row["cost"]." sum: ".$row["summation"];
 
                         mysqli_free_result($result);
