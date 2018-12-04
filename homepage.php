@@ -67,5 +67,12 @@
         <h3>Question 8</h3>
         <?php include 'question8_products.php'; ?>
 
+        <h3>Question 9</h3>
+        <form action = "question9_productinfo.php" method = "post">
+            Revenue from item: <input type="text" name="product_id"><br>	
+			<br />
+			<input type = "submit" value= "See Revenue"/>
+		</form>
+
     </body>
 </html>
