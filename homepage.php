@@ -42,6 +42,13 @@
 			<br />
 			<input type = "submit" value= "Enter Customer"/>
 		</form>
+
+        <h3>Question 5</h3>
+        <form action = "question5_changephonenumber.php" method = "post">
+            change phone number. Enter Customer ID to begin: <input type="text" name="customer_id"><br>	
+			<br />
+			<input type = "submit" value= "Enter Customer"/>
+		</form>
 		
     </body>
 </html>

@@ -33,6 +33,7 @@
 
                         $row=mysqli_fetch_assoc($get_result);
                         
+                        echo $row["quantity_purchased"];
 
                         if($row["quantity_purchased"]<$quantity){
                             echo "entry existed before; updated";
