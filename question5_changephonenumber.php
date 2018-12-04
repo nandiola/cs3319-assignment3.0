@@ -31,7 +31,7 @@
                         echo '<form action = "question5_newnumber.php" method = "post">';
                         echo  'New phone number: <input type="text" name="phone_number"><br>';
                         echo '<input type = "submit" value= "Enter Customer"/>';
-                        echo '</form>'
+                        echo '</form>';
 
                         mysqli_free_result($result);
                 ?>
