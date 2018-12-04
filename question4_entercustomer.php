@@ -25,7 +25,7 @@
                         
                         if($get_result == FALSE){
                             echo "entry didnt exist before; added new entry<br>";
-                            $insert_query = "INSERT INTO customers VALUES(".$customer_ID.",".$agent_id.",".$firstname.",".$lastname.",".$city_located.",".$phone_number.")";
+                            $insert_query = "INSERT INTO customers VALUES('".$customer_ID."','".$agent_id."','".$firstname."','".$lastname."','".$city_located."',".$phone_number.")";
 
                             $insert_result=mysqli_query($connection,$insert_query);
 
