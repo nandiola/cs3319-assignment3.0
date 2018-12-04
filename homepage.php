@@ -35,6 +35,13 @@
 			<br />
 			<input type = "submit" value= "Enter Purchase"/>
 		</form>
+
+        <h3>Question 4</h3>
+        <form action = "question4_entercustomer.php" method = "post">
+            <?php include 'question4buttons.php'; ?>	
+			<br />
+			<input type = "submit" value= "Enter Customer"/>
+		</form>
 		
     </body>
 </html>
